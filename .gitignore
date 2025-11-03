@@ -1,0 +1,21 @@
+# Archivos del Sistema
+.DS_Store
+Thumbs.db
+
+# Dependencias de Node (para AMBOS proyectos)
+# La '/**/' significa que los buscará en cualquier subcarpeta
+**/node_modules/
+
+# Archivos de entorno (Contraseñas, llaves de API, etc.)
+# Los buscaremos en la raíz y en las subcarpetas
+.env
+backend/.env
+frontend/.env
+
+# Archivos de compilación de React
+frontend/build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
