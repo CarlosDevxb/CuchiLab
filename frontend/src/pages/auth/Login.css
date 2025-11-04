@@ -1,0 +1,197 @@
+/* PASO 1: Importar las tipografías desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;700&display=swap');
+
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Variables CSS para la NUEVA paleta de colores */
+:root {
+    --color-snow: #F7F3E3;
+    --color-silver: #B3B6B7;
+    --color-cornell-red: #A50916;
+    --color-dark-red: #8F0707;
+    --color-barn-red: #6F1A07;
+    
+    --color-dark-text: #333;
+    --color-light-text: #f0f0f0;
+
+    /* PASO 2: Definir las nuevas familias de fuentes */
+    --font-main: 'Quicksand', sans-serif;
+    --font-logo: 'Comic Sans MS', bold, sans-serif;
+}
+
+/* Contenedor principal para centrar el login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--color-silver);
+    padding: 20px;
+    box-sizing: border-box;
+
+    /* PASO 2: Aplicar la fuente principal a todo */
+    font-family: var(--font-main);
+}
+
+/* La tarjeta grande del login */
+.login-card {
+    display: flex;
+    background-color: var(--color-snow);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Sección del formulario (izquierda) */
+.login-form-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.login-logo {
+    /* PASO 2: Aplicar la fuente del logo */
+    font-family: var(--font-logo);
+    font-size: 2.2em; /* Un poco más grande para que luzca la fuente */
+    font-weight: normal; /* La fuente script no necesita 'bold' */
+    color: var(--color-cornell-red);
+    margin-bottom: 20px;
+    text-align: center;
+    user-select: none;
+}
+
+.login-welcome {
+    font-size: 2em;
+    color: var(--color-dark-text);
+    margin-bottom: 5px;
+    font-weight: 700; /* Más peso para Quicksand */
+}
+
+.login-subtitle {
+    font-size: 1em;
+    color: var(--color-dark-text);
+    margin-bottom: 30px;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700; /* Más peso */
+    color: var(--color-dark-text);
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-silver);
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-family: var(--font-main); /* Asegura que la fuente se aplique aquí también */
+}
+
+.form-group input[type="email"]::placeholder,
+.form-group input[type="password"]::placeholder {
+    color: var(--color-silver);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.form-options label {
+    display: flex;
+    align-items: center;
+    color: var(--color-dark-text);
+    user-select: none;
+}
+
+.form-options input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: var(--color-cornell-red);
+}
+
+.forgot-password {
+    color: var(--color-silver);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-cornell-red);
+    color: var(--color-light-text);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700; /* Más peso */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-main);
+}
+
+.login-button:hover {
+    background-color: var(--color-dark-red);
+}
+
+.login-policy {
+    font-size: 0.8em;
+    color: var(--color-silver);
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Sección de la imagen (derecha) */
+.login-image-section {
+    flex: 1;
+
+    padding: 20px;
+    background-image: url('../../assets/icono.png'); 
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Media queries para responsividad (sin cambios) */
+@media (max-width: 768px) {
+    .login-card {
+        flex-direction: column;
+    }
+
+    .login-image-section {
+        min-height: 200px;
+    }
+}
